@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="utf-8">
-  <title>Plotly and Presentations</title>
+  <title>plotly</title>
     
   <meta name="apple-mobile-web-app-capable" content="yes" />
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
@@ -749,94 +749,9 @@ hljs.initHighlightingOnLoad();
   <div class="slides">
 
 <section data-state="section" data-transition="linear" data-transition-speed="default">
-<h1>Plotly and Presentations</h1><p>Peter Geers</p>
+<h1>plotly</h1><p></p>
 
 <div class="slideContent" >
-<p>date:  14- 02 -2017</p>
-
-<p>autosize: true</p>
-
-</div>
-
-</section>
-<section data-transition="linear" data-transition-speed="default">
-<h3>First Slide</h3>
-<div class="slideContent" >
-<p>For more details on authoring R presentations please visit <a href="https://support.rstudio.com/hc/en-us/articles/200486468">https://support.rstudio.com/hc/en-us/articles/200486468</a>.</p>
-
-<ul>
-<li>Plot diamonds</li>
-<li>Data pressure</li>
-<li>Plot pressure</li>
-<li>Slide show ends </li>
-</ul>
-
-</div>
-
-</section>
-<section data-transition="linear" data-transition-speed="default">
-<h3>Plot diamonds</h3>
-<div class="slideContent" >
-<p>I was having some problems but the below code solved mine.</p>
-
-<pre><code class="r">library(plotly)
-d &lt;- diamonds[sample(nrow(diamonds), 1000), ]
-p=plot_ly(d, x = ~carat, y = ~price, color = ~carat,
-    size = ~carat, text = ~paste(&quot;Clarity: &quot;, clarity))
-htmlwidgets::saveWidget(as.widget(p), file = &quot;demo.html&quot;)
-</code></pre>
-
-<iframe src="demo.html" style="position:absolute;height:100%;width:100%"></iframe>
-
-<p></p>
-
-<p></p>
-
-</div>
-
-</section>
-<section data-transition="linear" data-transition-speed="default">
-<h3>Data pressure</h3>
-<div class="slideContent" >
-<pre><code class="r">data(pressure)
-summary(pressure)
-</code></pre>
-
-<pre><code>  temperature     pressure       
- Min.   :  0   Min.   :  0.0002  
- 1st Qu.: 90   1st Qu.:  0.1800  
- Median :180   Median :  8.8000  
- Mean   :180   Mean   :124.3367  
- 3rd Qu.:270   3rd Qu.:126.5000  
- Max.   :360   Max.   :806.0000  
-</code></pre>
-
-</div>
-
-</section>
-<section data-transition="linear" data-transition-speed="default">
-<h3>Plot pressure</h3>
-<div class="slideContent" >
-<pre><code class="r">library(plotly)
-data(pressure)
-p &lt;- plot_ly(pressure, x = ~temperature, y = ~pressure, color = ~temperature,
-    size = ~pressure, text = ~paste(&quot;Temperature: &quot;, temperature))
-htmlwidgets::saveWidget(as.widget(p), file = &quot;pressure.html&quot;)
-</code></pre>
-
-<iframe src="pressure.html" style="position:absolute;height:100%;width:100%"></iframe>
-
-<p></p>
-
-<p></p>
-
-</div>
-
-</section>
-<section data-transition="linear" data-transition-speed="default">
-<h3>Slide show ends</h3>
-<div class="slideContent" >
-<h1>Tough job but it worked out</h1>
 
 </div>
 
