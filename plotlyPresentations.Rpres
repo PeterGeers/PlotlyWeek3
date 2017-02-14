@@ -28,7 +28,7 @@ p=plot_ly(d, x = ~carat, y = ~price, color = ~carat,
     size = ~carat, text = ~paste("Clarity: ", clarity))
 htmlwidgets::saveWidget(as.widget(p), file = "demo.html")
 ```
-<iframe src="demo.html" style="position:absolute;height:100%;width:100%"></iframe>
+<iframe src="https://petergeers.github.io/PlotlyWeek3/demo.html" style="position:absolute;height:100%;width:100%"></iframe>
 
 <p> This is to create some space below </p>
 <p> </p>
@@ -49,7 +49,7 @@ p <- plot_ly(pressure, x = ~temperature, y = ~pressure, color = ~temperature,
     size = ~pressure, text = ~paste("Temperature: ", temperature))
 htmlwidgets::saveWidget(as.widget(p), file = "pressure.html")
 ```
-<iframe src="pressure.html" style="position:absolute;height:100%;width:100%"></iframe>
+<iframe src="https://petergeers.github.io/PlotlyWeek3/pressure.html#" style="position:absolute;height:100%;width:100%"></iframe>
 
 <p>Create some space below plot</p>
 <p></p>
