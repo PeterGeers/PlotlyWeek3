@@ -1,0 +1,62 @@
+Plotly and Presentations
+========================================================
+author: Peter Geers 
+
+date:  14- 02 -2017
+
+autosize: true
+
+First Slide
+========================================================
+
+For more details on authoring R presentations please visit <https://support.rstudio.com/hc/en-us/articles/200486468>.
+
+- Plot diamonds
+- Data pressure
+- Plot pressure
+- Slide show ends 
+
+Plot diamonds
+========================================================
+
+I had some problems reading data in rpresentation but i have solved mine.
+
+```{r plotDiamonds, echo=FALSE}
+library(plotly)
+d <- diamonds[sample(nrow(diamonds), 1000), ]
+p=plot_ly(d, x = ~carat, y = ~price, color = ~carat,
+    size = ~carat, text = ~paste("Clarity: ", clarity))
+htmlwidgets::saveWidget(as.widget(p), file = "demo.html")
+```
+<iframe src="demo.html" style="position:absolute;height:100%;width:100%"></iframe>
+
+<p> This is to create some space below </p>
+<p> </p>
+
+Data pressure
+===========================================
+```{r runCode, cache=TRUE}
+data(pressure)
+summary(pressure)
+```
+
+Plot pressure
+==========================================================
+```{r pressurePlot, echo=FALSE}
+library(plotly)
+data(pressure)
+p <- plot_ly(pressure, x = ~temperature, y = ~pressure, color = ~temperature,
+    size = ~pressure, text = ~paste("Temperature: ", temperature))
+htmlwidgets::saveWidget(as.widget(p), file = "pressure.html")
+```
+<iframe src="pressure.html" style="position:absolute;height:100%;width:100%"></iframe>
+
+<p>Create some space below plot</p>
+<p></p>
+
+
+Slide show ends
+================================================
+
+# Tough job but it worked out
+
